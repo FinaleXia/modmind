@@ -960,6 +960,10 @@ export interface AiModelInfo {
   toolCalling?: boolean
   /** Embedding, rerank, speech or moderation endpoints listed in a model catalog; not usable as an agent. */
   nonChat?: boolean
+  /** Context window the provider advertises in its catalog. Absent means the provider states none. */
+  declaredContextWindow?: number
+  /** Maximum output tokens the provider advertises in its catalog. */
+  declaredMaxOutputTokens?: number
 }
 
 export interface ModelReasoningCapabilities {
